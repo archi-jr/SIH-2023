@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebAuthn Biometric Authentication</title>
+</head>
+<body>
+    <h1>Biometric Authentication</h1>
+
+    <button id="registerButton">Register with Biometrics</button>
+    <button id="loginButton">Login with Biometrics</button>
+
+    <script>
+        document.getElementById('registerButton').addEventListener('click', () => {
+            fetch('/register')
+                .then(response => response.json())
+                .then(data => {
+                    const { challenge } = data;
+                    navigator.credentials.create({
+                        publicKey: {
+                            challenge: new TextEncoder().encode(challenge),
+                            rp: { name: 'Your App' },
+                            user: { id: new TextEncoder().encode('user-id'), name: 'user-name' },
+                            pubKeyCredParams: [{ type: 'public-key', alg: -7 }],
+                            timeout: 60000,
+                            attestation: 'direct',
+                        },
+                    })
+                    .then(response => {
+                        fetch('/register', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({ challenge, ...response }),
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                alert('Registration successful');
+                            } else {
+                                alert('Registration failed');
+                            }
+                        });
+                    })
+                    .catch(error => {
+                        console.error(error);
+                        alert('Registration error');
+                    });
+                });
+        });
+
+        document.getElementById('loginButton').addEventListener('click', () => {
+            fetch('/login')
+                .then(response => response.json())
+                .then(data => {
+                    const { challenge } = data;
+                    navigator.credentials.get({
+                        publicKey: {
+                            challenge: new TextEncoder().encode(challenge),
+                            userVerification: 'required',
+                            timeout: 60000,
+                        },
+                    })
+                    .then(response => {
+                        fetch('/login', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({ challenge, userId: 'user-id', ...response }),
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) alert('Login successful'); 
+                            else alert('Login failed');
+                        });
+                    })
+                    .catch(error => {
+                        console.error(error);
+                        alert('Login error');
+                    });
+                });
+        });
+    </script>
+</body>
+</html>

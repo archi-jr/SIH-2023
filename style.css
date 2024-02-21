@@ -1,0 +1,27 @@
+/* Set the background color of the entire page */
+body {
+    background-color: #fff; /* Use white as the background color */
+    background: url(./background.jpg);
+  background-size: cover; /* Cover the entire container with the image */
+  background-position: center; /* Center the image */
+  background-attachment: fixed;
+  filter: blur(0.5px); 
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+/* Create the tricolor effect using linear gradients */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Represents one-third of the page height */
+    z-index: -1; /* Place it behind the content */
+}
+
+body p {
+    color: black;
+}

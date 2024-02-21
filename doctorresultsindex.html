@@ -1,0 +1,58 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Text</title>
+</head>
+<body>
+    <h1>Displayed Text:</h1>
+    <p>{{ text }}</p>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Prescription</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Text</title>
+</head>
+<body>
+    <h1>Medicine Prescription</h1>
+    <form action="/prescribe" method="POST">
+        <!-- Input for Disease -->
+        <label for="disease">Disease:</label>
+        <input type="text" id="disease" name="disease" required><br>
+
+        <!-- Input for Prescribed Medicine -->
+        <label for="prescribed">Prescribed Medicine:</label>
+        <input type="text" id="prescribed" name="prescribed" required><br>
+
+        <!-- Input for Morning -->
+        <label for="morning">Morning:</label>
+        <input type="text" id="morning" name="morning"><br>
+
+        <!-- Input for Afternoon -->
+        <label for="afternoon">Afternoon:</label>
+        <input type="text" id="afternoon" name="afternoon"><br>
+
+        <!-- Input for Evening -->
+        <label for="evening">Evening:</label>
+        <input type="text" id="evening" name="evening"><br>
+
+        <!-- Input for Night -->
+        <label for="night">Night:</label>
+        <input type="text" id="night" name="night"><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Prescribe Medicine">
+    </form>
+    <h1>Displayed Text:</h1>
+    <p>{{ text }}</p>
+</body>
+</html>
+

@@ -1,0 +1,132 @@
+Patient ID,Symptoms as described,Probable diseases diagnosed by Tarak.AI
+1,fever,"Illnesses containing the symptom 'fever' are:
+Influenza (Flu)
+COVID-19
+Stomach Flu (Gastroenteritis)
+Bronchitis
+Pneumonia
+Tuberculosis(TB)
+Malaria
+Dengue Fever
+Typhoid Fever
+Acute Respiratory Infections (ARI)
+Kala-Azar (Visceral Leishmaniasis)
+Black Fever (Visceral Leishmaniasis)
+Buruli Ulcer
+Filariasis
+Guinea Worm Disease (Dracunculiasis)
+Schistosomiasis
+"
+2,fever,"Illnesses containing the symptom 'fever' are:
+Influenza (Flu)
+COVID-19
+Stomach Flu (Gastroenteritis)
+Bronchitis
+Pneumonia
+Tuberculosis(TB)
+Malaria
+Dengue Fever
+Typhoid Fever
+Acute Respiratory Infections (ARI)
+Kala-Azar (Visceral Leishmaniasis)
+Black Fever (Visceral Leishmaniasis)
+Buruli Ulcer
+Filariasis
+Guinea Worm Disease (Dracunculiasis)
+Schistosomiasis
+"
+3,dysfunction,"Illnesses containing the symptom 'dysfunction' are:
+Prostate Cancer
+"
+4,vomiting,"Illnesses containing the symptom 'vomiting' are:
+Stomach Flu (Gastroenteritis)
+Migraine
+Malaria
+Cholera
+Diarrheal Diseases
+Hemolytic Uremic Syndrome (HUS)
+Guinea Worm Disease (Dracunculiasis)
+"
+5,I am suffering from fever,"Illnesses containing the symptom 'fever' are:
+Influenza (Flu)
+COVID-19
+Stomach Flu (Gastroenteritis)
+Bronchitis
+Pneumonia
+Tuberculosis(TB)
+Malaria
+Dengue Fever
+Typhoid Fever
+Acute Respiratory Infections (ARI)
+Kala-Azar (Visceral Leishmaniasis)
+Black Fever (Visceral Leishmaniasis)
+Buruli Ulcer
+Filariasis
+Guinea Worm Disease (Dracunculiasis)
+Schistosomiasis
+"
+6,I have been vomiting,"Illnesses containing the symptom 'vomiting' are:
+Stomach Flu (Gastroenteritis)
+Migraine
+Malaria
+Cholera
+Diarrheal Diseases
+Hemolytic Uremic Syndrome (HUS)
+Guinea Worm Disease (Dracunculiasis)
+"
+7,fever,"Illnesses containing the symptom 'fever' are:
+Influenza (Flu)
+COVID-19
+Stomach Flu (Gastroenteritis)
+Bronchitis
+Pneumonia
+Tuberculosis(TB)
+Malaria
+Dengue Fever
+Typhoid Fever
+Acute Respiratory Infections (ARI)
+Kala-Azar (Visceral Leishmaniasis)
+Black Fever (Visceral Leishmaniasis)
+Buruli Ulcer
+Filariasis
+Guinea Worm Disease (Dracunculiasis)
+Schistosomiasis
+"
+8,I have been vomiting,"Illnesses containing the symptom 'vomiting' are:
+Stomach Flu (Gastroenteritis)
+Migraine
+Malaria
+Cholera
+Diarrheal Diseases
+Hemolytic Uremic Syndrome (HUS)
+Guinea Worm Disease (Dracunculiasis)
+"
+9,blood,"Illnesses containing the symptom 'blood' are:
+Prostate Cancer
+Tuberculosis(TB)
+Hemolytic Uremic Syndrome (HUS)
+Schistosomiasis
+"
+10,I have cold and I feel vomiting and also I am a little bit depressed,"Illnesses containing the symptom 'vomiting' are:
+Stomach Flu (Gastroenteritis)
+Migraine
+Malaria
+Cholera
+Diarrheal Diseases
+Hemolytic Uremic Syndrome (HUS)
+Guinea Worm Disease (Dracunculiasis)
+"
+11,I have stomach pain and I am a student of VIT,"Illnesses containing the symptom 'stomach' are:
+Stomach Flu (Gastroenteritis)
+Typhoid Fever
+"
+12,I have,"I'm sorry, I don't have information on that topic."
+13,depression,"I'm sorry, I don't have information on that topic."
+14,I have stomach pain and innovation problem also I have suffering from fever,"Illnesses containing the symptom 'stomach' are:
+Stomach Flu (Gastroenteritis)
+Typhoid Fever
+"
+15,I have stomach pain and also suffering from fever,"Illnesses containing the symptom 'stomach' are:
+Stomach Flu (Gastroenteritis)
+Typhoid Fever
+"

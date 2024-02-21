@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSV Viewer</title>
+</head>
+<body>
+    <h1>CSV Viewer</h1>
+    <input type="file" id="Symptoms and Illnesses" accept=".csv">
+    <hr>
+    <div id="csvTable"></div>
+
+    <script>
+        // JavaScript code to handle CSV file upload and display
+        document.getElementById('Symptoms and Illnesses').addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (event) {
+                    const csvData = event.target.result;
+                    const table = csvToHtmlTable(csvData);
+                    document.getElementById('csvTable').innerHTML = table;
+                };
+                reader.readAsText(file);
+            }
+        });
+
+        function csvToHtmlTable(csvData) {
+            const lines = csvData.split('\n');
+            if (lines.length <= 1) {
+                return 'No data to display.';
+            }
+
+            let tableHtml = '<table>';
+            for (let i = 0; i < lines.length; i++) {
+                tableHtml += '<tr>';
+                const cells = lines[i].split(',');
+                for (let j = 0; j < cells.length; j++) {
+                    tableHtml += i === 0 ? '<th>' : '<td>';
+                    tableHtml += cells[j];
+                    tableHtml += i === 0 ? '</th>' : '</td>';
+                }
+                tableHtml += '</tr>';
+            }
+            tableHtml += '</table>';
+            return tableHtml;
+        }
+    </script>
+</body>
+</html>

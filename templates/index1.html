@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medicine Prescription</title>
+</head>
+<body>
+    <h1>Medicine Prescription</h1>
+    <form action="/get_medicine" method="post">
+        <label for="disease">Enter the disease: </label>
+        <input type="text" name="disease" required><br>
+
+        <label for="prescribed">Enter the specific medicine: </label>
+        <input type="text" name="prescribed" required><br>
+
+        <label for="morning">Morning dosage: </label>
+        <input type="text" name="morning" required><br>
+
+        <label for="afternoon">Afternoon dosage: </label>
+        <input type="text" name="afternoon" required><br>
+
+        <label for="evening">Evening dosage: </label>
+        <input type="text" name="evening" required><br>
+
+        <label for="night">Night dosage: </label>
+        <input type="text" name="night" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <p>Prescription:</p>
+    <p>{{ prescription }}</p>
+</body>
+</html>

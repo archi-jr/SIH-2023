@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eSanjeevani App Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1><img src="Screenshot 2023-09-23 152624-removedbg.png"></h1>
+    <p>THIS IS "TARAK.AI" your Telemedicine Assistant in Rural Areas powered by AI and KIOSK service</p>
+  </header>
+  <main>
+
+    <style>
+      .speech {
+        border: 1px solid #ddd;
+        width: 300px;
+        padding: 0;
+        margin: 0;
+      }
+
+      .speech input {
+        border: 0;
+        width: 240px;
+        display: inline-block;
+        height: 30px;
+        font-size: 14px;
+      }
+
+      .speech img {
+        float: right;
+        width: 40px;
+      }
+    </style>
+
+    <form id="redirect_search" method="post" action="/chat">
+      <div class="speech">
+          <input type="text" name="user_input" id="transcript" placeholder="Say Something" />
+          <img onclick="startDictation()" src="Screenshot 2023-09-23 152624-removedbg.png" alt="Microphone" />
+      </div>
+  </form>
+    {% if user_input %}
+    <p>You: {{ user_input }}</p>
+    {% endif %}
+    {% if response %}
+    <p>Tarak.AI: {{ response }}</p>
+    {% endif %}
+  <script>
+    function startDictation() {
+        if ('webkitSpeechRecognition' in window) {
+            var recognition = new webkitSpeechRecognition();
+
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            recognition.lang = 'en-US';
+            recognition.start();
+
+            recognition.onresult = function (e) {
+                var transcript = e.results[0][0].transcript;
+                document.getElementById('transcript').value = transcript;
+                recognition.stop();
+                document.getElementById('redirect_search').submit();
+            };
+
+            recognition.onerror = function (e) {
+                recognition.stop();
+            };
+        } else {
+            alert('Speech recognition is not supported in this browser.');
+        }
+    }
+    </script>
+
+
+  </main>
+<footer>
+  <style>
+    /* Container for the button and dot */
+    .button-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000; /* Ensures it's above other elements */
+    }
+
+    /* Red dot */
+    .red-dot {
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        color: white;
+    }
+
+    /* Basic Button Styles */
+    .meet-button {
+        background-color: #0073e6;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.1s ease;
+        margin-left: 5px; /* Adjust the space between the dot and button */
+    }
+
+    /* Hover Animation */
+    .meet-button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+
+    /* Button Link Styles */
+    .meet-button a {
+        color: inherit;
+        text-decoration: none;
+    }
+</style>
+</head>
+<body>
+<div class="button-container">
+    <span class="red-dot">MEET</span>
+    <button class="meet-button">
+        <a href="https://meet.google.com/pkk-vweg-tmz" target="_blank">Join</a>
+    </button>
+</div>
+
+</footer>
+</body>
+</html>

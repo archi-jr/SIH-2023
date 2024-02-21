@@ -1,0 +1,27 @@
+body {
+    font-family: 'Alatsi', sans-serif;
+    margin: 0;
+    overflow: hidden;
+    background: rgb(90, 231, 121);
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .title {
+    font-size: 10vw;
+    color: rgb(206, 158, 158);
+  }
+  
+  canvas {
+    width: 200%;
+  }
